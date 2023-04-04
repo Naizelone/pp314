@@ -15,8 +15,8 @@ public class User {
     private String surname;
     @Column(name = "age")
     private Integer age;
-    @Column(name = "salary")
-    private Integer salary;
+//    @Column(name = "salary")
+//    private Integer salary;
     @Column(name = "email")
     private String email;
     @Column(name = "password")
@@ -31,11 +31,11 @@ public class User {
     public User() {
     }
 
-    public User(String name, String surname, Integer age, Integer salary, String email, String password, Role role, Status status) {
+    public User(String name, String surname, Integer age, String email, String password, Role role, Status status) {
         this.name = name;
         this.surname = surname;
         this.age = age;
-        this.salary = salary;
+//        this.salary = salary;
         this.email = email;
         this.password = password;
         this.role = role;
@@ -74,13 +74,13 @@ public class User {
         this.age = age;
     }
 
-    public Integer getSalary() {
-        return salary;
-    }
-
-    public void setSalary(Integer salary) {
-        this.salary = salary;
-    }
+//    public Integer getSalary() {
+//        return salary;
+//    }
+//
+//    public void setSalary(Integer salary) {
+//        this.salary = salary;
+//    }
 
     public String getEmail() {
         return email;
@@ -121,7 +121,10 @@ public class User {
                 ", name='" + name + '\'' +
                 ", surname='" + surname + '\'' +
                 ", age=" + age +
-                ", salary=" + salary +
+                ", email='" + email + '\'' +
+                ", password='" + password + '\'' +
+                ", role=" + role +
+                ", status=" + status +
                 '}';
     }
 }
